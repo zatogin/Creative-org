@@ -1,0 +1,141 @@
+    /*-------BASIC SETUP*/
+* { margin: 0; padding: 0; }
+body {background-color: #fff; letter-spacing: 1px;}
+#pageWrap {width: 100%;}
+ul li {list-style-type: none;}
+
+    /*-------NAVIGATION-*/
+nav {
+    width: 100%;
+    border-bottom: 1px dotted #000;
+    position: fixed; z-index: 10;
+    background-color: #fff;
+}
+.logo {font-family: 'Lobster', cursive; font-size: 2em;}
+nav ul {
+    font-family: 'Lobster', cursive; font-family: 'Sarpanch', sans-serif;
+    float: right; position: relative;
+}
+nav ul li {display: inline;}
+.menuL {/*links setup*/
+    padding: 5px;
+    border: 1px solid #000; 
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,1);
+    text-decoration: overline; color: #000;
+    transition: text-decoration .2s ease-in-out;
+}
+a.menuL:hover {text-decoration: underline;}
+a.menuL:active {box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);}
+    /*--HOME SECTION--*/
+#home {
+    text-align: center; clear: both;
+    background: rgb(254,252,234);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(92%,rgba(254,252,234,1)), color-stop(100%,rgba(241,218,54,1)));
+    background: -webkit-linear-gradient(top,  rgba(254,252,234,1) 92%,rgba(241,218,54,1) 100%);
+    background: linear-gradient(to bottom,  rgba(254,252,234,1) 92%,rgba(241,218,54,1) 100%);
+}
+h1 {font-family: 'Fascinate', cursive;}
+#home p {
+    margin: 5px auto;
+    font-family: 'Herr Von Muellerhoff', cursive;
+}
+    /*--ABOUT SECTION--*/
+#about {
+    background: rgb(255,255,77);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(41%,rgba(255,255,77,1)), color-stop(100%,rgba(204,122,41,1)));
+    background: -webkit-linear-gradient(top,  rgba(255,255,77,1) 41%,rgba(204,122,41,1) 100%);
+    background: linear-gradient(to bottom,  rgba(255,255,77,1) 41%,rgba(204,122,41,1) 100%);
+}
+#about > #aboutLi {
+    visibility:hidden;
+    opacity:0;
+    -webkit-transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+    transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+}
+#about:hover > #aboutLi {
+    visibility:visible;
+    opacity:1;
+    -webkit-transition-delay:0s;
+    transition-delay:0s;
+}
+#aboutLi li.aboutIt {display: inline-block; margin: auto 50px;}
+#aboutLi figure {
+    cursor: pointer; border: 1px solid black;
+}
+#aboutLi figure .person {
+    font-family: 'Montserrat', sans-serif;
+    display: block; text-align: center;
+    z-index: 5;
+    transition: transform 0.5s;
+}
+#aboutLi figure:hover .person {transform: scale(0.4);}
+#aboutLi figcaption {
+    padding: 0 2px;
+    margin: -140px auto 0 auto;
+    font-family: 'Lobster', cursive; font-size: 0.5em;
+    background: rgba(245,196,0,1);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(245,196,0,1)), color-stop(50%, rgba(255,246,82,1)), color-stop(100%, rgba(245,196,0,1)));
+    background: -webkit-linear-gradient(left, rgba(245,196,0,1) 0%, rgba(255,246,82,1) 50%, rgba(245,196,0,1) 100%);
+    background: linear-gradient(to right, rgba(245,196,0,1) 0%, rgba(255,246,82,1) 50%, rgba(245,196,0,1) 100%);
+    color: antiquewhite; opacity: 0;
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+}
+#aboutLi figure:hover figcaption {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+    /*--SERVICE SECTION--*/
+#service {
+    background: rgba(246,147,76,1);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(246,147,76,1)), color-stop(50%, rgba(204,103,36,1)), color-stop(100%, rgba(201,246,243,1)));
+    background: -webkit-linear-gradient(top, rgba(246,147,76,1) 0%, rgba(204,103,36,1) 50%, rgba(201,246,243,1) 100%);
+ /* IE 10+ */background: linear-gradient(to bottom, rgba(246,147,76,1) 0%, rgba(204,103,36,1) 50%, rgba(201,246,243,1) 100%);
+}
+#service h2 {
+    font-family: 'Teko', sans-serif; text-align: center;
+    text-shadow: 1px 1px 2px #000000;
+}
+#wrap {margin: 10px;}
+.servL {
+    padding: 5px;
+    display: inline-block;
+}
+.servHe {
+    text-align: center; font-family: 'Comfortaa', cursive;
+    text-shadow: 1px 1px #fff;
+}
+.serT {
+    margin-top: 25px; text-indent: 25px; 
+    font-family: 'Grand Hotel', cursive; text-shadow: 1px 1px #000000;
+}
+    /*--CONTACT SECTION--*/
+#contact {
+    clear: both;
+    background: rgba(201,246,243,1);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(201,246,243,1)), color-stop(30%, rgba(115,219,219,1)), color-stop(50%, rgba(72,153,153,1)), color-stop(70%, rgba(116,219,219,1)), color-stop(100%, rgba(202,246,243,1)));
+    background: -webkit-linear-gradient(top, rgba(201,246,243,1) 0%, rgba(115,219,219,1) 30%, rgba(72,153,153,1) 50%, rgba(116,219,219,1) 70%, rgba(202,246,243,1) 100%);
+    background: linear-gradient(to bottom, rgba(201,246,243,1) 0%, rgba(115,219,219,1) 30%, rgba(72,153,153,1) 50%, rgba(116,219,219,1) 70%, rgba(202,246,243,1) 100%);
+    height: 300px; text-align: center;
+}
+#contact span {
+    font-size: 3em;
+    font-family: Impact, Charcoal, sans-serif;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 1px #080808;
+}
+    #contact  ul {margin: 50px; list-style-type: none; font-size: 1.2em; }
+#contact ul li {
+    background-color: antiquewhite;
+    display: inline; 
+    margin: 15px; padding: 10px;
+    border: 2px solid #000; 
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
