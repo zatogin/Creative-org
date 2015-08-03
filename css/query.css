@@ -1,39 +1,161 @@
-@import url('index.css');
-/*-XXLarge screens----*/
-@media only screen and (min-width: 120.063em) {
+@charset "utf-8";
+/*-XLarge screens--*/
+@media only screen and (min-width: 1601px) and (max-width: 1910px) {
     
+    section {height: 55em;}
+    #aboutLi li.aboutIt {margin: 2px 20px;}
+    #aboutLi figure .person {font-size: 2em;}
+    #aboutLi figcaption {margin: -98px auto 0 auto;}
+
+}
+@media only screen and (min-width: 1541px) and (max-width: 1600px) {
     
+    section {height: 54em;}
+    #aboutLi li.aboutIt {margin: 5px 4px;}
+    #aboutLi figure .person {font-size: 1.5em;}
+    #aboutLi figcaption {margin: -92px auto 0 auto;}
+    #serT {margin-top: 8px; font-size: 1em;}
+    #serL {margin: 15px 70px; width: 226px;}
+    #service {height: 70em;}
+
+}
+@media only screen and (min-width: 1441px) and (max-width: 1540px) {
     
-} /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+    section {height: 54em;}
+    #aboutLi li.aboutIt {margin: 5px 4px;}
+    #aboutLi figure .person {font-size: 1.5em;}
+    #aboutLi figcaption {margin: -92px auto 0 auto;}
+    #serT {margin-top: 8px; font-size: 1em;}
+    #serL {margin: 15px 30px; width: 190px;}
+    #service {height: 70em;}
+
+}
+
+/*-Large screens--*/
+@media only screen and (min-width: 1301px) and (max-width: 1440px) {
+    
+    section {height: 53em;}
+    #aboutLi li.aboutIt {margin: 5px 4px; margin-top: 184px;}
+    #aboutLi figure {width: 355px; height: 300px; height: 302px; 
+        margin: -111px auto 0 auto; padding: 2px;}
+    #aboutLi figure .person {font-size: 1.5em; margin-top: 184px;}
+    #aboutLi figcaption {margin: -215px auto 0 auto; height: 303px;}
+    #aboutLi figcaption .secP {margin-top: 155px;}
+    #serT {margin-top: 8px; font-size: 1em;}
+    #serL {margin: 15px 30px; width: 190px;}
+    #service {height: 68em;}
+
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
+    
+    section {height: 49em;}
+    #home h1 {padding-top: 215px;}
+    #aboutLi li.aboutIt {margin: 5px 4px; margin-top: 184px;}
+    #aboutLi figure {width: 355px; height: 300px; height: 302px; 
+        margin: -111px auto 0 auto; padding: 2px;}
+    #aboutLi figure .person {font-size: 1.5em; margin-top: 184px;}
+    #aboutLi figcaption {margin: -215px auto 0 auto; height: 303px;}
+    #aboutLi figcaption .secP {margin-top: 155px;}
+    #serT {margin-top: 8px; font-size: 1em;}
+    #serL {margin: 15px 30px; width: 190px;}
+    #service {height: 70em;}
+
+}
 
 
-/*-Large screens------*/
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
     
-    
-    
-} /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+    section {height: 47em;}
+    #home h1 {padding-top: 215px;}
+    #about {height: 61em;}
+    #aboutLi li.aboutIt {margin: 5px 4px; margin-top: 115px;}
+    #aboutLi figure {width: 355px; height: 300px; height: 302px; 
+        margin: -111px auto 0 auto; padding: 0px;}
+    #aboutLi figure .person {font-size: 1.5em; margin-top: 184px;}
+    #aboutLi figcaption {margin: -215px auto 0 auto; height: 303px;}
+    #aboutLi figcaption .secP {margin-top: 155px;}
+    #serT {margin-top: 8px; margin: 15px 38px; font-size: 1em;}
+    #serL {margin: 15px 38px; width: 190px;}
+    #service {height: 89em;}
+
+}
 
 
 /*-Medium screens-----*/
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+
+@media only screen and (min-width: 834px) and (max-width: 1023px) {
     
+    section {height: 85em;}
+    #aboutLi figure {
+        display: inline-block; width: 290px; 
+        height: 290px; margin: 70px 10px;
+    }
+    #aboutLi li.aboutIt {display: inline;margin: 5px 16px;}
+    #aboutLi figure .person {font-size: 2em;}
+    #aboutLi figcaption .secP {margin-top: 107px;}
+    #aboutLi figcaption {height: 290px;}
+    #aboutLi figure .person {margin-top: 101px;}
+    #service {height: 89em;}
+
+}
+
+@media only screen and (min-width: 795px) and (max-width: 833px) {
     
+    section {height: 85em;}
+    #home h6 {width: 23em;}
+    #about {height: 90em;}
+    #aboutLi figure {
+        display: inline-block; width: 290px; 
+        height: 290px; margin: 70px 10px;
+    }
+    #aboutLi li.aboutIt {display: inline;margin: 5px 16px;}
+    #aboutLi figure .person {font-size: 2em;}
+    #aboutLi figcaption .secP {margin-top: 107px;}
+    #aboutLi figcaption {height: 290px;}
+    #aboutLi figure .person {margin-top: 101px;}
+    #wrap {margin: 0px;}
     
 }
-@media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: landscape) {
+
+/*_Small screens--*/
+
+@media only screen and (min-width: 641px) and (max-width: 794px) {
     
-    
+    section {height: 49em;}
+    #home h6 {width: 19em;}
+    #about {height: 77em;}
+    #aboutLi figure {
+        display: inline-block; width: 290px; 
+        height: 290px; margin: 70px 0;
+    }
+    #aboutLi li.aboutIt {display: inline; margin: 5px 16px;}
+    #aboutLi figure .person {font-size: 2em;}
+    #aboutLi figure {width: 250px; height: 250px;}
+    #aboutLi figcaption .secP {margin-top: 65px;}
+    #aboutLi figcaption {height: 250px;}
+    #aboutLi figcaption p {font-size: 0.9em;}
+    #aboutLi figure .person {margin-top: 101px;}
+    #wrap {margin: 0px;}
+    .servL {margin: 15px 15px;}
+    #service {height: 89em;}
     
 }
-/*-Small screens------*/
-@media only screen and (max-width: 40em) {
+
+@media only screen and (min-width: 401px) and (max-width: 640px;) {
     
+    section {height: 49em;}
+    #home h1 {padding-top: 20px;}
+    #wrap {margin: 0px;}
+    #contact {font-size: 0.5em;}
+}
+
+@media only screen and (min-width: 240px) and (max-width: 400px;) {
     
+    section {height: 49em;}
+section {height: 49em;}
+    #home h1 {padding-top: 20px;}
+    #wrap {margin: 0px;}
+    #contact {font-size: 0.5em;}
     
-} /* max-width 640px, mobile-only styles, use when QAing mobile issues */
-@media only screen and (max-width: 40em) and (orientation: landscape) {
-    
-    
-    
-} /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+}
