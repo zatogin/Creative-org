@@ -1,15 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
     <head>
         <meta charset="utf-8">
         <title>CREATIVE</title>
+        <meta name="viewport" content="width=device-width" />
         <meta name="keywords" content="">
         <meta name="description" content="">
         <meta name="author" content="Zatogin Aleksandor (Anekseria)">
         <!--CSS SECTION-->
         <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/ladScreen.css">
+        <link rel="stylesheet" href="css/loader.css">
+        <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/query.css">
-        <!----GOOGLE FONTS-->
+        <!--GOOGLE FONTS-->
         <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Sarpanch' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
@@ -22,33 +26,90 @@
         <link href='http://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <!--PAGE START---------------------------->
-        <div id="pageWrap">
-            <!---NAVIGATION----------------------->
-            <nav>
-                <!--LOGO-->
-                <div class="logo">CREATIVE</div>
-                <!--MENU-->
-                <ul>
-                    <li><a class="menuL" href="#home">Home</a></li>
-                    <li><a class="menuL" href="#about">About</a></li>
-                    <li><a class="menuL" href="#service">Services</a></li>
-                    <li><a class="menuL" href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <!--LOADING-->
+        <section id="loadsec"> 
+            <section id="loadT">
+                <h4>Доброго времени суток!</h4>
+                <p>Меня зрвут Александр. Я разработчик данного сайта.<br>
+                Присылайте свои отзывы или коментарии на<br> zatogin1995@gmail.com</p>
+                <div class="container">
+	               <div class="content">
+                        <div class="ball"></div>
+                        <div class="ball1"></div>
+                    </div>
+                </div>
+            </section>
             
-            <!--HOME SECTION----------------------->
+        </section>
+        <!--PAGE START-->
+        <script>
+            var inter=window.setInterval(function () {Timer()}, 6000);
+            function Timer() {
+                document.getElementById("pageWrap").style.position = "initial";
+            }
+        </script>
+        <div id="pageWrap">
+    <script>
+        $(function() {
+            $('.header__mobile-nav-link').click(function() {
+                // Calling a function in case you want to expand upon this.
+                toggleNav();
+            });
+        });
+
+        function toggleNav() {
+            $('#l-site-wrapper').toggleClass('show-nav');
+        }
+    </script>
+            <!--NAVIGATION-->
+<div id="l-site-wrapper">
+  <div id="l-site-canvas">
+    <header>
+      <!-- HAMBURGER MENU ICON -->
+      <div class="header__mobile-nav-link">
+        <div class="header__mobile-nav-link__line"></div>
+        <div class="header__mobile-nav-link__line"></div>
+        <div class="header__mobile-nav-link__line"></div>
+      </div>
+      
+      <!--SITE LOGO-->
+      <div class="header__logo">CREATIVE</div>
+           
+      <!--SITE NAVIGATION-->
+      <nav class="navigation navigation--main">
+        <ul class="navigation__list">
+          <li class="navigation__list-item"><a class="navigation__link" href="#home">Home </a></li>
+          <li class="navigation__list-item"><a class="navigation__link" href="#about">About</a></li>
+          <li class="navigation__list-item"><a class="navigation__link" href="#service">Service</a></li>
+          <li class="navigation__list-item"><a class="navigation__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    </div>
+</div>
+            <!--HOME SECTION-->
             <section id="home">
                 <h1>CREATIVE</h1>
                 <h3>Is modern world-wide company</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nisi enim, vulputate at justo tristique, tempor sagittis dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sit amet ligula consequat urna posuere convallis.</p>
+                <h6 class="mobile-hide">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nisi enim, vulputate at justo tristique, tempor sagittis dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sit amet ligula consequat urna posuere convallis.</h6>
             </section>
-            <!--ABOUT SECTION---------------------->
+            <!--ABOUT SECTION-->
             <section id="about">
+	<h2>Our command</h2>
+		<div id="mobile">
+		    <ul>
+			<li>Belovol Sasha</li>
+			<li>Dasha Vann</li>
+			<li>Ira Belenko</li>
+			<li>Polina Vovk</li>
+			<li>Sveta Danko</li>
+			<li>Egor Gura</li>
+		    </ul>
+		</div>
                 <ul id="aboutLi">
                     <li class="aboutIt">
                         <figure>
-                            <h3 class="person">Me</h3>
+                            <h3 class="person">Belovol Sasha</h3>
                             <figcaption>
                                 <p class="firsP">Cras porta dolor ut velit imperdiet, quis sodales tellus facilisis. Vestibulum magna turpis, tincidun blandit semper lorem.</p> 
                                 <p class="secP">Mauris nodesterin feugiat neque, a aliquet ligula. Sed non felis tincidunt, facilisis felis vitae, mollis est. Nulla sapien dui, feugiat sed velit a, egestas porta magna. Maecenas</p>
@@ -57,7 +118,7 @@
                     </li>
                     <li class="aboutIt">
                         <figure>
-                            <h3 class="person">My friend</h3>
+                            <h3 class="person">Dasha Vann</h3>
                             <figcaption>
                                 <p class="firsP">Cras porta dolor ut velit imperdiet, quis sodales tellus facilisis. Vestibulum magna turpis, tincidun blandit semper lorem.</p> 
                                 <p class="secP">Mauris nodesterin feugiat neque, a aliquet ligula. Sed non felis tincidunt, facilisis felis vitae, mollis est. Nulla sapien dui, feugiat sed velit a, egestas porta magna. Maecenas</p>
@@ -66,7 +127,7 @@
                     </li>
                     <li class="aboutIt">
                         <figure>
-                            <h3 class="person">My friend</h3>
+                            <h3 class="person">Ira Belenko</h3>
                             <figcaption>
                                 <p class="firsP">Cras porta dolor ut velit imperdiet, quis sodales tellus facilisis. Vestibulum magna turpis, tincidun blandit semper lorem.</p> 
                                 <p class="secP">Mauris nodesterin feugiat neque, a aliquet ligula. Sed non felis tincidunt, facilisis felis vitae, mollis est. Nulla sapien dui, feugiat sed velit a, egestas porta magna. Maecenas</p>
@@ -75,7 +136,7 @@
                     </li>
                     <li class="aboutIt">
                         <figure>
-                            <h3 class="person">My friend</h3>
+                            <h3 class="person">Polina Vovk</h3>
                             <figcaption>
                                 <p class="firsP">Cras porta dolor ut velit imperdiet, quis sodales tellus facilisis. Vestibulum magna turpis, tincidun blandit semper lorem.</p> 
                                 <p class="secP">Mauris nodesterin feugiat neque, a aliquet ligula. Sed non felis tincidunt, facilisis felis vitae, mollis est. Nulla sapien dui, feugiat sed velit a, egestas porta magna. Maecenas</p>
@@ -84,7 +145,7 @@
                     </li>
                     <li class="aboutIt">
                         <figure>
-                            <h3 class="person">My friend</h3>
+                            <h3 class="person">Sveta Danko</h3>
                             <figcaption>
                                 <p class="firsP">Cras porta dolor ut velit imperdiet, quis sodales tellus facilisis. Vestibulum magna turpis, tincidun blandit semper lorem.</p> 
                                 <p class="secP">Mauris nodesterin feugiat neque, a aliquet ligula. Sed non felis tincidunt, facilisis felis vitae, mollis est. Nulla sapien dui, feugiat sed velit a, egestas porta magna. Maecenas</p>
@@ -93,7 +154,7 @@
                     </li>
                     <li class="aboutIt">
                         <figure>
-                            <h3 class="person">My friend</h3>
+                            <h3 class="person">Egor Gura</h3>
                             <figcaption>
                                 <p class="firsP">Cras porta dolor ut velit imperdiet, quis sodales tellus facilisis. Vestibulum magna turpis, tincidun blandit semper lorem.</p> 
                                 <p class="secP">Mauris nodesterin feugiat neque, a aliquet ligula. Sed non felis tincidunt, facilisis felis vitae, mollis est. Nulla sapien dui, feugiat sed velit a, egestas porta magna. Maecenas</p>
@@ -142,7 +203,8 @@
             </section>
             <!--CONTACT SECTION---------------------->
             <section id="contact">
-                <span>example.@gmail.com</span><br>
+		<h6>Our Contacts</h6>
+                <span id="contE">example.@gmail.com</span><br>
                 <span>support.example@gmail.com</span>
                 <ul>
                     <li>01-01-033</li>
@@ -151,7 +213,5 @@
                 </ul>
             </section>
         </div>
-    <script src="js/jquery-1.11.3.min.js"></script>
-        <script src="js/index.js"></script>
     </body>
 </html>
