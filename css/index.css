@@ -1,32 +1,117 @@
-    /*-------BASIC SETUP*/
+      /*-------BASIC SETUP*/
 * { margin: 0; padding: 0; }
-body {background-color: #fff; letter-spacing: 1px;}
+body {
+    background-color: #fff; letter-spacing: 1px;
+    text-align: center; height: 100%;
+}
 #pageWrap {width: 100%;}
+section {height: 60em;}
 ul li {list-style-type: none;}
+html {height: 100%;}
+/*--NAVIGATION*/
+header {
+  background: #FFF; border-bottom: 1px dotted #000; 
+  position: relative;
+  float: left;
+  width: 100%;
+}
 
-    /*-------NAVIGATION-*/
-nav {
-    width: 100%;
-    border-bottom: 1px dotted #000;
-    position: fixed; z-index: 10;
-    background-color: #fff;
+.header__logo {
+  padding: 20px;
+  float: left;
 }
-.logo {font-family: 'Lobster', cursive; font-size: 2em;}
-nav ul {
-    font-family: 'Lobster', cursive; font-family: 'Sarpanch', sans-serif;
-    float: right; position: relative;
+
+.header__mobile-nav-link {
+  float: right;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
 }
-nav ul li {display: inline;}
-.menuL {/*links setup*/
-    padding: 5px;
-    border: 1px solid #000; 
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 4px 4px 5px 0px rgba(0,0,0,1);
-    text-decoration: overline; color: #000;
-    transition: text-decoration .2s ease-in-out;
+@media only screen and (min-width: 668px) {
+  .header__mobile-nav-link {
+    display: none;
+    background: red;
+  }
 }
-a.menuL:hover {text-decoration: underline;}
-a.menuL:active {box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);}
+
+.header__mobile-nav-link__line {
+  height: 3px;
+  width: 22px;
+  margin-bottom: 4px;
+  background: #424A4D;
+}
+
+@media only screen and (max-width: 667px) {
+  .navigation--main {
+    background: #000;
+    position: fixed;
+    top: 0;
+    right: -270px;
+    width: 270px;
+    height: 100%;
+    min-height: 100%;
+  }
+}
+
+.navigation__list {
+  margin: 0;
+  float: right;
+  list-style-type: none;
+  display: inline-block;
+}
+
+.navigation__list-item {
+  float: left;
+}
+
+.navigation__link {
+  display: block;
+  text-decoration: none;
+  padding: 20px 10px;
+  color: #FFF;
+  width: 270px;
+  border-bottom: 1px solid #4F4F4F;
+}
+@media only screen and (min-width: 668px) {
+  .navigation__link {
+    color: #000;
+    border-bottom: 0;
+    width: auto;
+  }
+}
+
+#l-site-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+#l-site-wrapper.show-nav #l-site-canvas {
+  -webkit-transform: translateX(-270px);
+  transform: translateX(-270px);
+  position: fixed;
+}
+
+#l-site-canvas {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  background: #CCC;
+  position: relative;
+  -webkit-transform: translateX(0);
+  -webkit-transition: 0.5s cubic-bezier(0.75, -0.25, 0.25, 0.75);
+}
+
+#content {
+  clear: both;
+  padding: 10px;
+}
+@media only screen and (min-width: 668px) {
+  #content {
+    padding: 20px;
+  }
+}
+
     /*--HOME SECTION--*/
 #home {
     text-align: center; clear: both;
@@ -35,49 +120,93 @@ a.menuL:active {box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);}
     background: -webkit-linear-gradient(top,  rgba(254,252,234,1) 92%,rgba(241,218,54,1) 100%);
     background: linear-gradient(to bottom,  rgba(254,252,234,1) 92%,rgba(241,218,54,1) 100%);
 }
-h1 {font-family: 'Fascinate', cursive;}
-#home p {
+@media only screen and (max-width: 640px) {
+	h1 {padding-top: 30px;}
+}
+h1 {padding-top: 350px; font-family: 'Fascinate', cursive;}
+@media screen and (max-width: 640px) {
+	#home h6 {display: none;}
+}
+#home h6 {
     margin: 5px auto;
     font-family: 'Herr Von Muellerhoff', cursive;
+    font-size: 2em; width: 25em;
 }
     /*--ABOUT SECTION--*/
+@media only screen and (max-width: 640px) { 
+#about {height: 10em;}
+}
 #about {
+height: 53em;
     background: rgb(255,255,77);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(41%,rgba(255,255,77,1)), color-stop(100%,rgba(204,122,41,1)));
-    background: -webkit-linear-gradient(top,  rgba(255,255,77,1) 41%,rgba(204,122,41,1) 100%);
-    background: linear-gradient(to bottom,  rgba(255,255,77,1) 41%,rgba(204,122,41,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(41%,rgba(241,218,54,1)), color-stop(100%,rgba(204,122,41,1)));
+    background: -webkit-linear-gradient(top,  rgba(241,218,54,1) 41%,rgba(204,122,41,1) 100%);
+    background: linear-gradient(to bottom,  rgba(241,218,54,1) 41%,rgba(204,122,41,1) 100%);
+}
+@media only screen and (max-width: 640px) {
+	#aboutLi {display: none;}
+	#mobile ul {color: #000;}
+#mobile ul li {margin: 60px auto;}
+}
+#mobile { 
+	border-bottom:1px dotted #000;
+color: rgb(241,218,54);
 }
 #about > #aboutLi {
-    visibility:hidden;
-    opacity:0;
-    -webkit-transition:visibility 0s linear 0.5s,opacity 0.5s linear;
-    transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+    visibility: hidden; opacity:0;
+    -webkit-animation: persLi 1s linear forwards paused;
+    -moz-animation: persLi 1s linear forwards paused;
+    animation: persLi 1s linear forwards paused;
 }
 #about:hover > #aboutLi {
-    visibility:visible;
-    opacity:1;
-    -webkit-transition-delay:0s;
-    transition-delay:0s;
+    -webkit-animation: persLi 1s linear forwards running;
+    -moz-animation: persLi 1s linear forwards running;
+    animation: persLi 1s linear forwards running;
 }
-#aboutLi li.aboutIt {display: inline-block; margin: auto 50px;}
+    @-webkit-keyframes persLi {
+        from {visibility:hidden; opacity: 0;}
+        to {visibility:visible; opacity: 1;}
+    }
+    @-moz-keyframes persLi {
+        from {visibility:hidden; opacity: 0;}
+        to {visibility:visible; opacity: 1;}
+    }
+    @keyframes persLi {
+        from {visibility:hidden; opacity: 0;}
+        to {visibility:visible; opacity: 1;}
+    }
+#aboutLi li.aboutIt {display: inline-block; margin: 5px 70px;}
+@media only screen and (max-width: 640px) {
+    #aboutLi figure {height: 120px; width: 120px; margin: 2px;}
+}
 #aboutLi figure {
-    cursor: pointer; border: 1px solid black;
+    cursor: pointer;
+        width: 430px; height: 346px;
+        border: 1px solid black;
+        margin: 20px 10px;
 }
 #aboutLi figure .person {
-    font-family: 'Montserrat', sans-serif;
-    display: block; text-align: center;
-    z-index: 5;
-    transition: transform 0.5s;
+   font-family: 'Montserrat', sans-serif;
+        font-size: 3em;
+        display: block;
+        text-align: center;
+        margin-top: 82px;
+        z-index: 5;
+        transition: transform 0.5s;
+}
+
+@media only screen and (max-width: 640px) {
+	#aboutLi figcaption {display: none;}
 }
 #aboutLi figure:hover .person {transform: scale(0.4);}
 #aboutLi figcaption {
-    padding: 0 2px;
+    padding: 0 2px; height: 345px;
     margin: -140px auto 0 auto;
-    font-family: 'Lobster', cursive; font-size: 0.5em;
-    background: rgba(245,196,0,1);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(245,196,0,1)), color-stop(50%, rgba(255,246,82,1)), color-stop(100%, rgba(245,196,0,1)));
-    background: -webkit-linear-gradient(left, rgba(245,196,0,1) 0%, rgba(255,246,82,1) 50%, rgba(245,196,0,1) 100%);
-    background: linear-gradient(to right, rgba(245,196,0,1) 0%, rgba(255,246,82,1) 50%, rgba(245,196,0,1) 100%);
+    font-family: 'Lobster', cursive; font-size: 1em;
+    background: rgba(122,196,53,1);
+ /* FF3.6+ */background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(122,196,53,1)), color-stop(50%, rgba(155,204,8,1)), color-stop(100%, rgba(122,196,53,1)));
+/* Chrome, Safari4+ */background: -webkit-linear-gradient(top, rgba(122,196,53,1) 0%, rgba(155,204,8,1) 50%, rgba(122,196,53,1) 100%);
+ /* IE 10+ */background: linear-gradient(to bottom, rgba(122,196,53,1) 0%, rgba(155,204,8,1) 50%, rgba(122,196,53,1) 100%);
     color: antiquewhite; opacity: 0;
     -webkit-transform: scale(0.7);
     transform: scale(0.7);
@@ -91,12 +220,16 @@ h1 {font-family: 'Fascinate', cursive;}
     transform: scale(1);
     opacity: 1;
 }
+#aboutLi figcaption .secP {
+        margin-top: 220px;
+}
+
     /*--SERVICE SECTION--*/
 #service {
     background: rgba(246,147,76,1);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(246,147,76,1)), color-stop(50%, rgba(204,103,36,1)), color-stop(100%, rgba(201,246,243,1)));
-    background: -webkit-linear-gradient(top, rgba(246,147,76,1) 0%, rgba(204,103,36,1) 50%, rgba(201,246,243,1) 100%);
- /* IE 10+ */background: linear-gradient(to bottom, rgba(246,147,76,1) 0%, rgba(204,103,36,1) 50%, rgba(201,246,243,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(204,122,41,1)), color-stop(50%, rgba(204,103,36,1)), color-stop(100%, rgba(201,246,243,1)));
+    background: -webkit-linear-gradient(top, rgba(204,122,41,1) 0%, rgba(204,103,36,1) 50%, rgba(201,246,243,1) 100%);
+ /* IE 10+ */background: linear-gradient(to bottom, rgba(204,122,41,1) 0%, rgba(204,103,36,1) 50%, rgba(201,246,243,1) 100%);
 }
 #service h2 {
     font-family: 'Teko', sans-serif; text-align: center;
@@ -106,13 +239,15 @@ h1 {font-family: 'Fascinate', cursive;}
 .servL {
     padding: 5px;
     display: inline-block;
+    width: 226px; margin: 15px 70px;
 }
 .servHe {
     text-align: center; font-family: 'Comfortaa', cursive;
     text-shadow: 1px 1px #fff;
 }
+@media only screen and (max-width: 640px) {.serT {display:none;}}
 .serT {
-    margin-top: 25px; text-indent: 25px; 
+    margin-top: 25px; text-indent: 25px;  font-size: 1.2em;
     font-family: 'Grand Hotel', cursive; text-shadow: 1px 1px #000000;
 }
     /*--CONTACT SECTION--*/
@@ -125,16 +260,15 @@ h1 {font-family: 'Fascinate', cursive;}
     height: 300px; text-align: center;
 }
 #contact span {
-    font-size: 3em;
+    font-size: 1em;
     font-family: Impact, Charcoal, sans-serif;
-    margin-bottom: 25px;
+    padding-bottom: 25px;
     text-shadow: 2px 2px 1px #080808;
 }
-    #contact  ul {margin: 50px; list-style-type: none; font-size: 1.2em; }
+    #contact  ul {margin: 50px; list-style-type: none; font-size: 1.3em; }
 #contact ul li {
     background-color: antiquewhite;
-    display: inline; 
-    margin: 15px; padding: 10px;
+    padding: 10px;
     border: 2px solid #000; 
     border-radius: 15px 15px 15px 15px;
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
